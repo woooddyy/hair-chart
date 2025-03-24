@@ -27,9 +27,9 @@ $(document).ready(function() {
     });
     
     $('.carousel').on('touchend', () => {
-        if (startX > endX + 50) {
+        if (startX > endX + 5) {
             currentIndex ++;
-        } else if (startX < endX - 50) {
+        } else if (startX < endX - 5) {
             currentIndex --;
         }
         currentIndex = Math.max(0, Math.min(currentIndex, totalSlides-1));
