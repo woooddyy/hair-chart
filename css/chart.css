@@ -155,7 +155,7 @@ button:hover {
     color: #666;
     cursor: pointer;
 }
-.check-items-area .check-item:hover, .check-items-area .check-item:focus, .check-items-area .check-item.on {
+.check-items-area .check-item.on {
     border-color: #f77767;
     background-color: #f77767;
     color: #fff;
