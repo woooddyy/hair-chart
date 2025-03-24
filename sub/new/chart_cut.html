@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시술내용</title>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/chart.css"/>
+</head>
+<style>
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../js/chart.js"></script>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Hair Chart</h1>
+        </header>
+        <nav>
+            <div class="home">
+                <a href="../../index.html" title="홈">
+                    <img src="../../img/home_24dp.svg" alt="홈"/>
+                </a>
+            </div>
+            <div class="staff-info">디자이너 <span class="staff-name">김헤어</span>님</div>
+            <div class="logout">로그아웃</div>
+        </nav>
+        <main>
+            <div class="check-area">
+                <div class="check-title">
+                    1. 시술내용
+                </div>
+                <div class="check-cntn">
+                    <div class="check-subtitle">
+                        컷트
+                    </div>
+                    <div id="cutCheck" class="check-items-area">
+                        <p class="check-item" id="cut00" name="cut">남자컷</p>
+                        <p class="check-item" id="cut01" name="cut">짧은머리컷</p>
+                        <p class="check-item" id="cut02" name="cut">중간머리컷</p>
+                        <p class="check-item" id="cut03" name="cut">긴머리컷</p>
+                        <p class="check-item" id="cut04" name="cut">단발컷</p>
+                        <p class="check-item" id="cut05" name="cut">기타<br/>(메모입력)</p>
+                    </div>
+                    <div class="check-subtitle">
+                        펌
+                    </div>
+                    <div id="permCheck" class="check-items-area">
+                        <p class="check-item" id="perm00" name="perm">일반펌</p>
+                        <p class="check-item" id="perm01" name="perm">클리닉펌</p>
+                        <p class="check-item" id="perm02" name="perm">셋팅펌</p>
+                        <p class="check-item" id="perm03" name="perm">매직펌</p>
+                        <p class="check-item" id="perm04" name="perm">디지털펌</p>
+                        <p class="check-item" id="perm05" name="perm">매직&amp;셋팅펌</p>
+                        <p class="check-item" id="perm06" name="perm">볼륨매직펌</p>
+                        <p class="check-item" id="perm07" name="perm">뿌리볼륨펌</p>
+                        <p class="check-item" id="perm08" name="perm">뿌리매직펌</p>
+                        <p class="check-item" id="perm09" name="perm">다운펌</p>
+                    </div>
+                    <div class="check-subtitle">
+                        염색
+                    </div>
+                    <div id="dyeCheck" class="check-items-area">
+                        <p class="check-item" id="dye00" name="dye">전체염색</p>
+                        <p class="check-item" id="dye01" name="dye">뿌리염색</p>
+                        <p class="check-item" id="dye02" name="dye">헤나염색</p>
+                        <p class="check-item" id="dye03" name="dye">와칸염색</p>
+                        <p class="check-item" id="dye04" name="dye">탈색</p>
+                        <p class="check-item" id="dye05" name="dye">새치염색</p>
+                        <p class="check-item" id="dye06" name="dye">솜브레</p>
+                        <p class="check-item" id="dye07" name="dye">기타<br/>(메모입력)</p>
+                    </div>
+                    <div class="check-subtitle">
+                        염색
+                    </div>
+                    <div id="clinicCheck" class="check-items-area">
+                        <p class="check-item" id="clinic00" name="clinic">모발클리닉</p>
+                        <p class="check-item" id="clinic01" name="clinic">두피클리닉</p>
+                        <p class="check-item" id="clinic02" name="clinic">기타(메모입력)</p>
+                    </div>
+                    <div class="check-subtitle">
+                        메모
+                    </div>
+                    <div id="memo" class="memo-area">
+                        <textarea name="memo00"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-btn-area">
+                <a href="./chart_skin.html" class="click-btn" title="모발,두피진단">모발, 두피 진단</a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Hair Chart. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
