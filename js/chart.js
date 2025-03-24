@@ -3,7 +3,7 @@ $(document).ready(function() {
     let currentIndex = 0;
     const slides = $('.carousel-slide');
     const totalSlides = slides.length;
-    
+    const slideWidth = slides.outerWidth();
     function moveSlide(direction) {
         currentIndex += direction;
         
@@ -13,9 +13,29 @@ $(document).ready(function() {
             currentIndex = 0;
         }
 
-        const slideWidth = slides.outerWidth();
         $('.carousel').css('transform', `translateX(-${currentIndex * slideWidth}px)`);
     }
+    
+    let startX = 0;
+    let endX = 0;
+
+    $('.carousel').on('touchstart', e => {
+        startX = e.touches[0].clientX;
+    });
+    $('.carousel').on('touchmove', e => {
+        endX = e.touches[0].clientX;
+    });
+    
+    $('.carousel').on('touchend', () => {
+        if (startX > endX + 50) {
+            currentIndex ++;
+        } else if (startX < endX - 50) {
+            currentIndex --;
+        }
+        currentIndex = Math.max(0, Math.min(currentIndex, totalSlides-1));
+        $('.carousel').css('transform', `translateX(-${currentIndex * slideWidth}px)`);
+    });
+
 
     // 좌측 버튼 클릭
     $('.prev').click(function() {
