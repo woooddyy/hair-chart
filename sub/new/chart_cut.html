@@ -28,55 +28,71 @@
         <main>
             <div class="check-area">
                 <div class="check-title">
-                    1. 시술내용
+                    2. 시술내용
                 </div>
                 <div class="check-cntn">
                     <div class="check-subtitle">
-                        컷트
+                        <div class="title">컷트</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_cut">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_cut">-</button>
+                        </div>
                     </div>
                     <div id="cutCheck" class="check-items-area">
-                        <p class="check-item" id="cut00" name="cut">남자컷</p>
-                        <p class="check-item" id="cut01" name="cut">짧은머리컷</p>
-                        <p class="check-item" id="cut02" name="cut">중간머리컷</p>
-                        <p class="check-item" id="cut03" name="cut">긴머리컷</p>
-                        <p class="check-item" id="cut04" name="cut">단발컷</p>
-                        <p class="check-item" id="cut05" name="cut">기타<br/>(메모입력)</p>
+                        <p class="check-item" id="cut00">남자컷</p>
+                        <p class="check-item" id="cut01">짧은머리컷</p>
+                        <p class="check-item" id="cut02">중간머리컷</p>
+                        <p class="check-item" id="cut03">긴머리컷</p>
+                        <p class="check-item" id="cut04">단발컷</p>
+                        <p class="check-item" id="cut05">기타<br/>(메모입력)</p>
                     </div>
                     <div class="check-subtitle">
-                        펌
+                        <div class="title">펌</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_perm">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_perm">-</button>
+                        </div>
                     </div>
                     <div id="permCheck" class="check-items-area">
-                        <p class="check-item" id="perm00" name="perm">일반펌</p>
-                        <p class="check-item" id="perm01" name="perm">클리닉펌</p>
-                        <p class="check-item" id="perm02" name="perm">셋팅펌</p>
-                        <p class="check-item" id="perm03" name="perm">매직펌</p>
-                        <p class="check-item" id="perm04" name="perm">디지털펌</p>
-                        <p class="check-item" id="perm05" name="perm">매직&amp;셋팅펌</p>
-                        <p class="check-item" id="perm06" name="perm">볼륨매직펌</p>
-                        <p class="check-item" id="perm07" name="perm">뿌리볼륨펌</p>
-                        <p class="check-item" id="perm08" name="perm">뿌리매직펌</p>
-                        <p class="check-item" id="perm09" name="perm">다운펌</p>
+                        <p class="check-item" id="perm00">일반펌</p>
+                        <p class="check-item" id="perm01">클리닉펌</p>
+                        <p class="check-item" id="perm02">셋팅펌</p>
+                        <p class="check-item" id="perm03">매직펌</p>
+                        <p class="check-item" id="perm04">디지털펌</p>
+                        <p class="check-item" id="perm05">매직&amp;셋팅펌</p>
+                        <p class="check-item" id="perm06">볼륨매직펌</p>
+                        <p class="check-item" id="perm07">뿌리볼륨펌</p>
+                        <p class="check-item" id="perm08">뿌리매직펌</p>
+                        <p class="check-item" id="perm09">다운펌</p>
                     </div>
                     <div class="check-subtitle">
-                        염색
+                        <div class="title">염색</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_dye">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_dye">-</button>
+                        </div>
                     </div>
                     <div id="dyeCheck" class="check-items-area">
-                        <p class="check-item" id="dye00" name="dye">전체염색</p>
-                        <p class="check-item" id="dye01" name="dye">뿌리염색</p>
-                        <p class="check-item" id="dye02" name="dye">헤나염색</p>
-                        <p class="check-item" id="dye03" name="dye">와칸염색</p>
-                        <p class="check-item" id="dye04" name="dye">탈색</p>
-                        <p class="check-item" id="dye05" name="dye">새치염색</p>
-                        <p class="check-item" id="dye06" name="dye">솜브레</p>
-                        <p class="check-item" id="dye07" name="dye">기타<br/>(메모입력)</p>
+                        <p class="check-item" id="dye00">전체염색</p>
+                        <p class="check-item" id="dye01">뿌리염색</p>
+                        <p class="check-item" id="dye02">헤나염색</p>
+                        <p class="check-item" id="dye03">와칸염색</p>
+                        <p class="check-item" id="dye04">탈색</p>
+                        <p class="check-item" id="dye05">새치염색</p>
+                        <p class="check-item" id="dye06">솜브레</p>
+                        <p class="check-item" id="dye07">기타<br/>(메모입력)</p>
                     </div>
                     <div class="check-subtitle">
-                        클리닉
+                        <div class="title">클리닉</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_clinic">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_clinic">-</button>
+                        </div>
                     </div>
                     <div id="clinicCheck" class="check-items-area">
-                        <p class="check-item" id="clinic00" name="clinic">모발클리닉</p>
-                        <p class="check-item" id="clinic01" name="clinic">두피클리닉</p>
-                        <p class="check-item" id="clinic02" name="clinic">기타(메모입력)</p>
+                        <p class="check-item" id="clinic00">모발클리닉</p>
+                        <p class="check-item" id="clinic01">두피클리닉</p>
+                        <p class="check-item" id="clinic02">기타(메모입력)</p>
                     </div>
                     <div class="check-subtitle">
                         메모
