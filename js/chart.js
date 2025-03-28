@@ -67,7 +67,7 @@ $(document).ready(function() {
     });
     // 건너뛰기
     $('#skipBtn').on('click', function() {
-        window.location.href='./chart_cut.html';
+        window.location.href='./chart_consult.html';
     });
 
     // 시술 선택 이벤트
