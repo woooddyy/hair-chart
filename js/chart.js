@@ -84,11 +84,14 @@ $(document).ready(function() {
                 cnt += 1
             }
         }
-        $("#"+type+"Check").append('<p class="check-item" id="'+type+cnt+'"><input type="text" class="item-input"/></p>');
+        $("#"+type+"Check").append('<p class="check-item add-item" id="'+type+cnt+'"><input type="text" class="item-input"/></p>');
     });
     $(".remove-item-btn").click(function() {
         var id = $(this).attr("id");
         var type = id.split("_")[1];
+        $('.add-item.on').each(function() {
+            $(this).css({"display" : "none"});
+        });
     });
 
     // 시술 선택 이벤트
