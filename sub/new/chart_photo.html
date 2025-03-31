@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="chart-btn-area">
-                <a id="nextBtn" href="./chart_cut.html" class="click-btn disabled" title="시술내용">시술내용</a>
+                <a id="nextBtn" href="./chart_consult.html" class="click-btn disabled" title="상태상담">상태상담</a>
             </div>
         </main>
         <footer>
@@ -45,70 +45,3 @@
     </div>
 </body>
 </html>
-
-<!--
-
-<body>
-
-    <h1>사진 촬영 화면</h1>
-    
-    <div class="photo-container">
-        <img id="preview" src="" alt="촬영된 사진 미리보기" style="display: none;">
-        <p id="no-image-message">사진을 촬영하세요.</p>
-    </div>
-
-    <div class="button-group">
-        <button id="captureButton">촬영하기</button>
-        <button id="uploadButton">불러오기</button>
-        <button id="skipButton">건너뛰기</button>
-    </div>
-
-    <div>
-        <button class="next-button" id="nextButton" disabled>다음</button>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            // 사진 촬영하기 버튼 클릭
-            $('#captureButton').on('click', function() {
-                // 실제 사진 촬영 로직은 여기에 추가 (예: 카메라 API 활용)
-                $('#preview').attr('src', 'https://via.placeholder.com/300'); // 예시 이미지
-                $('#preview').show();
-                $('#no-image-message').hide();
-                $('#nextButton').prop('disabled', false); // '다음' 버튼 활성화
-            });
-
-            // 불러오기 버튼 클릭
-            $('#uploadButton').on('click', function() {
-                var input = $('<input type="file" accept="image/*">');
-                input.on('change', function(e) {
-                    var file = e.target.files[0];
-                    if (file) {
-                        var reader = new FileReader();
-                        reader.onload = function(event) {
-                            $('#preview').attr('src', event.target.result);
-                            $('#preview').show();
-                            $('#no-image-message').hide();
-                            $('#nextButton').prop('disabled', false); // '다음' 버튼 활성화
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                });
-                input.click();
-            });
-
-            // 건너뛰기 버튼 클릭
-            $('#skipButton').on('click', function() {
-                $('#preview').hide();
-                $('#no-image-message').show();
-                $('#nextButton').prop('disabled', false); // '다음' 버튼 활성화
-            });
-
-            // 다음 버튼 클릭 시 시술 내용 화면으로 이동
-            $('#nextButton').on('click', function() {
-                window.location.href = 'procedure.html'; // 시술 내용 화면으로 이동 (예시)
-            });
-        });
-    </script>
-
--->

@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>알림설정</title>
+    <title>차트입력</title>
     <link rel="stylesheet" href="../../css/common.css"/>
     <link rel="stylesheet" href="../../css/chart.css"/>
 </head>
-<style>
-</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="../../js/chart.js"></script>
+<script src="../../js/consult_style.js"></script>
 <body>
     <div class="wrapper">
         <header>
@@ -26,29 +24,24 @@
             <div class="logout">로그아웃</div>
         </nav>
         <main>
-            <div class="check-area">
-                <div class="check-title">
-                    4. 알림설정
+            <div class="photo-area">
+                <div class="photo-container">
+                    <img id="preview" src="" alt="촬영된 사진 미리보기" style="display:none;" />
+                    <p id="noImgMsg">사진을 촬영하세요.</p>
                 </div>
-                <div class="check-cntn">
-                    <div class="check-subtitle">
-                        스타일링 및 사후관리 알림
-                    </div>
-                    <div class="date-time-area">
-                        <input type="date" id="styleDate" name="styleDate" />
-                        <input type="time" id="styleTime" name="styleTime" />
-                    </div>
-                    <div class="check-subtitle">
-                        다음 샵 방문 알림
-                    </div>
-                    <div class="date-time-area">
-                        <input type="date" id="visitDate" name="visitDate" />
-                        <input type="time" id="visitTime" name="visitTime" />
-                    </div>
+                <div class="photo-btn-area">
+                    <button id="captureBtn" type="button" class="click-btn">촬영하기</button>
+                    <button id="uploadBtn" type="button" class="click-btn">불러오기</button>
                 </div>
             </div>
-            <div class="chart-btn-area">
-                <a href="../../index.html" class="click-btn circle-btn" title="차트고객공유">차트<br/>고객공유</a>
+            <div class="memo-area">
+                <div class="memo-title">
+                    원하는 스타일 및 문의 내용
+                </div>
+                <textarea id="styleMemo" name="styleMemo"></textarea>
+            </div>
+            <div class="chart-btn-area" style="margin-top: 10px;">
+                <a id="nextBtn" href="../index.html" class="click-btn disabled" title="상담문의하기">상담문의하기</a>
             </div>
         </main>
         <footer>

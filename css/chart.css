@@ -137,6 +137,8 @@ button:hover {
 .check-cntn .check-subtitle {
     font-weight: 700;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 .check-items-area {
     padding-bottom: 20px;
@@ -155,26 +157,44 @@ button:hover {
     color: #666;
     cursor: pointer;
 }
+.check-items-area .check-item .item-input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color:transparent;
+    width: 80%;
+}
 .check-items-area .check-item.on {
     border-color: #f77767;
     background-color: #f77767;
     color: #fff;
+}
+.memo-area .memo-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 .memo-area textarea {
     border: 1px solid #ccc;
     width: 100%;
     height: 50px;
 }
+.check-item b {
+    display: contents;
+}
 #cutCheck .check-item {
     flex: 1 0 16%;
 }
-#permCheck .check-item {
+#tipCheck .check-item {
+    flex: 1 0 100%;
+    margin-bottom: 10px;
+}
+#shapeCheck .check-item, #permCheck .check-item {
     flex: 1 0 20%;
 }
-#dyeCheck .check-item, #hairCheck .check-item {
+#headCheck .check-item, #dyeCheck .check-item, #hairCheck .check-item {
     flex: 1 0 25%;
 }
-#clinicCheck .check-item, #skinCheck .check-item {
+#perColCheck .check-item, #clinicCheck .check-item, #skinCheck .check-item {
     flex: 1 0 33%;
 }
 .tip .check-item {
@@ -190,4 +210,23 @@ button:hover {
     line-height: 40px;
     flex: 1 0 50%;
     text-align: center;
+}
+
+.add-remove-area {
+    display: flex;
+}
+button.add-remmove-btn {
+    border: none;
+    width: auto;
+    height: auto;
+}
+.add-remmove-btn {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    width: 50px !important;
+    height: 25px !important;
+    line-height: 30px;
+    margin: 0;
+    margin-left: 5px;
 }

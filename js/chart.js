@@ -67,17 +67,36 @@ $(document).ready(function() {
     });
     // 건너뛰기
     $('#skipBtn').on('click', function() {
-        window.location.href='./chart_cut.html';
+        window.location.href='./chart_consult.html';
+    });
+
+    // 아이템 행추가/행삭제
+    $(".add-item-btn").click(function() {
+        var id = $(this).attr("id");
+        var type = id.split("_")[1];
+        var cnt = $("#"+type+"Check .check-item").length-1;
+        if (cnt == 99) {
+            return false;
+        } else {
+            if (cnt < 9) {
+                cnt = '0' + (cnt+1)
+            } else {
+                cnt += 1
+            }
+        }
+        $("#"+type+"Check").append('<p class="check-item" id="'+type+cnt+'"><input type="text" class="item-input"/></p>');
+    });
+    $(".remove-item-btn").click(function() {
+        var id = $(this).attr("id");
+        var type = id.split("_")[1];
     });
 
     // 시술 선택 이벤트
-    $('.check-item').on('click', function() {
-        var name = $(this).attr('name');
+    $('.check-items-area').on('click', '.check-item', function() {
         // 이미 on 인경우 on 해제
         if ($(this).hasClass('on')) {
             $(this).removeClass('on');
         } else {
-            $('.check-item[name="' + name + '"]').removeClass('on');
             $(this).addClass('on');
         }
     });

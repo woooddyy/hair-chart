@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태상담</title>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/chart.css"/>
+</head>
+<style>
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../js/chart.js"></script>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Hair Chart</h1>
+        </header>
+        <nav>
+            <div class="home">
+                <a href="../../index.html" title="홈">
+                    <img src="../../img/home_24dp.svg" alt="홈"/>
+                </a>
+            </div>
+            <div class="staff-info">디자이너 <span class="staff-name">김헤어</span>님</div>
+            <div class="logout">로그아웃</div>
+        </nav>
+        <main>
+            <div class="check-area">
+                <div class="check-title">
+                    1. 상태상담
+                </div>
+                <div class="check-cntn">
+                    <div class="check-subtitle">
+                        <div class="title">얼굴형</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_shape">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_shape">-</button>
+                        </div>
+                    </div>
+                    <div id="shapeCheck" class="check-items-area">
+                        <p class="check-item" id="shape00">계란형</p>
+                        <p class="check-item" id="shape01">다이아몬드형</p>
+                        <p class="check-item" id="shape02">둥근형</p>
+                        <p class="check-item" id="shape03">긴 사각형</p>
+                        <p class="check-item" id="shape04">정사각형</p>
+                        <p class="check-item" id="shape05">타원형</p>
+                        <p class="check-item" id="shape06">삼각형</p>
+                        <p class="check-item" id="shape07">하트형</p>
+                        <p class="check-item" id="shape08">역삼각형</p>
+                    </div>
+                    <div class="check-subtitle">
+                        <div class="title">두상</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_head">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_head">-</button>
+                        </div>
+                    </div>
+                    <div id="headCheck" class="check-items-area">
+                        <p class="check-item" id="head00">둥근형</p>
+                        <p class="check-item" id="head01">좌측 치우침<br/>우측 취우침</p>
+                        <p class="check-item" id="head02">앞 납작<br/>뒤 납작</p>
+                        <p class="check-item" id="head03">앞 장두<br/>뒤 장두</p>
+                    </div>
+                    <div class="check-subtitle">
+                        <div class="title">퍼스널컬러</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_perCol">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_perCol">-</button>
+                        </div>
+                    </div>
+                    <div id="perColCheck" class="check-items-area">
+                        <p class="check-item" id="perCol00">the<br/><b>Dark</b><br/>Winter</p>
+                        <p class="check-item" id="perCol01">the<br/><b>True</b><br/>Winter</p>
+                        <p class="check-item" id="perCol02">the<br/><b>Bright</b><br/>Winter</p>
+                        <p class="check-item" id="perCol03">the<br/><b>Bright</b><br/>Spring</p>
+                        <p class="check-item" id="perCol04">the<br/><b>True</b><br/>Spring</p>
+                        <p class="check-item" id="perCol05">the<br/><b>Light</b><br/>Spring</p>
+                        <p class="check-item" id="perCol06">the<br/><b>Soft</b><br/>Summer</p>
+                        <p class="check-item" id="perCol07">the<br/><b>True</b><br/>Summer</p>
+                        <p class="check-item" id="perCol08">the<br/><b>Light</b><br/>Summer</p>
+                        <p class="check-item" id="perCol09">the<br/><b>Dark</b><br/>Autumn</p>
+                        <p class="check-item" id="perCol10">the<br/><b>True</b><br/>Autumn</p>
+                        <p class="check-item" id="perCol11">the<br/><b>Soft</b><br/>Autumn</p>
+                    </div>
+                    <div class="check-subtitle">
+                        <div class="title">모발</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_hair">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_hair">-</button>
+                        </div>
+                    </div>
+                    <div id="hairCheck" class="check-items-area">
+                        <p class="check-item" id="hair00">발수성모(강모)</p>
+                        <p class="check-item" id="hair01">다공성모(손상모)</p>
+                        <p class="check-item" id="hair02">직모</p>
+                        <p class="check-item" id="hair03">곱슬모</p>
+                        <p class="check-item" id="hair04">백모</p>
+                        <p class="check-item" id="hair05">파마모</p>
+                        <p class="check-item" id="hair06">염색모</p>
+                        <p class="check-item" id="hair07">연모(얇은모)</p>
+                    </div>
+                    <div class="check-subtitle">
+                        <div class="title">두피</div>
+                        <div class="add-remove-area">
+                            <button type="button" class="add-remmove-btn click-btn add-item-btn" id="add_skin">+</button>
+                            <button type="button" class="add-remmove-btn click-btn remove-item-btn" id="remove_skin">-</button>
+                        </div>
+                    </div>
+                    <div id="skinCheck" class="check-items-area">
+                        <p class="check-item" id="skin00">보통성</p>
+                        <p class="check-item" id="skin01">지성(뾰루지및각질)</p>
+                        <p class="check-item" id="skin02">건성(각질)</p>
+                        <p class="check-item" id="skin03">비듬성</p>
+                        <p class="check-item" id="skin04">탈모성</p>
+                        <p class="check-item" id="skin05">민감성</p>
+                    </div>
+                    <div class="check-subtitle">
+                        메모
+                    </div>
+                    <div id="memo" class="memo-area">
+                        <textarea name="memo00"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-btn-area">
+                <a href="./chart_cut.html" class="click-btn" title="시술내용">시술내용</a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Hair Chart. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
