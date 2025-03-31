@@ -157,10 +157,21 @@ button:hover {
     color: #666;
     cursor: pointer;
 }
+.check-items-area .check-item .item-input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color:transparent;
+    width: 80%;
+}
 .check-items-area .check-item.on {
     border-color: #f77767;
     background-color: #f77767;
     color: #fff;
+}
+.memo-area .memo-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 .memo-area textarea {
     border: 1px solid #ccc;

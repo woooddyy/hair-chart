@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/chart.css"/>
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="../../js/chart.js"></script>
+<script src="../../js/consult_style.js"></script>
 <body>
     <div class="wrapper">
         <header>
@@ -32,11 +32,16 @@
                 <div class="photo-btn-area">
                     <button id="captureBtn" type="button" class="click-btn">촬영하기</button>
                     <button id="uploadBtn" type="button" class="click-btn">불러오기</button>
-                    <button id="skipBtn" type="button" class="click-btn">건너뛰기</button>
                 </div>
             </div>
-            <div class="chart-btn-area">
-                <a id="nextBtn" href="./chart_consult.html" class="click-btn disabled" title="상태상담">상태상담</a>
+            <div class="memo-area">
+                <div class="memo-title">
+                    원하는 스타일 및 문의 내용
+                </div>
+                <textarea id="styleMemo" name="styleMemo"></textarea>
+            </div>
+            <div class="chart-btn-area" style="margin-top: 10px;">
+                <a id="nextBtn" href="../index.html" class="click-btn disabled" title="상담문의하기">상담문의하기</a>
             </div>
         </main>
         <footer>
