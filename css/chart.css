@@ -146,7 +146,8 @@ button:hover {
     flex-wrap: wrap;
 }
 .check-items-area .check-item {
-    height: 50px;
+    height: auto;
+    min-height: 50px;
     border: 1px solid #ccc;
     display: flex;
     align-items: center;
@@ -156,12 +157,16 @@ button:hover {
     box-sizing: border-box;
     color: #666;
     cursor: pointer;
+    flex-direction: column;
 }
-.check-items-area .check-item .item-input {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    background-color:transparent;
-    width: 80%;
+.check-items-area .check-item img {
+    width: 50px;
+}
+#shapeCheck .check-item {
+    height: 100px;
+}
+#headCheck .check-item {
+    height: 120px;
 }
 .check-items-area .check-item.on {
     border-color: #f77767;

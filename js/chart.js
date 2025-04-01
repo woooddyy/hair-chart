@@ -84,7 +84,22 @@ $(document).ready(function() {
                 cnt += 1
             }
         }
-        $("#"+type+"Check").append('<p class="check-item add-item" id="'+type+cnt+'"><input type="text" class="item-input"/></p>');
+        $("#popupModal").css({"display" : "block"}).addClass(type);
+        $("#popupModal input").addClass(type+cnt);
+    });
+    $("#confirmBtn").click(function() {
+        var type = $("#popupModal").attr("class");
+        var itemNm = $("#itemNm").val();
+        $("#"+type+"Check").append('<p class="check-item add-item" id="'+$("#itemNm").attr("class")+'">'+itemNm+'</p>');
+
+        $("#itemNm").removeClass();
+        $("#itemNm").val("");
+        $("#popupModal").css({"display" : "none"}).removeClass();
+    });
+    $("#cancelBtn").click(function() {
+        $("#itemNm").removeClass();
+        $("#itemNm").val("");
+        $("#popupModal").css({"display" : "none"}).removeClass();
     });
     $(".remove-item-btn").click(function() {
         var id = $(this).attr("id");

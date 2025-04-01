@@ -176,3 +176,36 @@ button.click-btn {
 footer {
     display: none;
 }
+/** 팝업 **/
+#popupModal {
+    display:none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 10px;
+    padding: 20px 40px;
+    z-index: 9999;
+}
+#popupModal h2 {
+    font-size: 20px;
+}
+#popupModal input {
+    width: 100%;
+    margin: 10px 0 20px;
+    line-height: 30px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.modal-buttons {
+    display: flex;
+    height: 40px;
+    margin: 0;
+}
+.modal-buttons .click-btn {
+    position: relative;
+    font-size: 14px;
+}
